@@ -11,7 +11,7 @@ import {Graph} from "./components/table/Graph";
 import {Schedule} from "./components/table/Schedule";
 
 
-export const App = () => {
+export const AppMain = () => {
     const dateJSON = require("./components/dataset.json")
     const dispatch = useDispatch()
     const arrayDataJSON = useSelector<RootStateType, Array<DatasetReducerType>>(state => state.dataset.arrayNew)
@@ -23,7 +23,6 @@ export const App = () => {
         dispatch(setNewArrAC(arrayDataJSON, dateJSON))
         console.log('useEffect')
     }, [arrayDataJSON, dateJSON])
-
 
     let temperatures =
         rangeDateArray.map((a: any) => {
