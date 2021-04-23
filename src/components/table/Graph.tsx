@@ -17,6 +17,7 @@ export const Graph: React.FC<PropsType> = ({onCLickBeginSearch, minT, maxT}) => 
             amt: 2210,
         },
     ];
+    const newFunc = () => {
     return (
         <div className="table">
             <Button variant="contained" color="primary" className='button' onClick={onCLickBeginSearch}>Поиск</Button>
